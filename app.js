@@ -14,6 +14,11 @@ app.use(cors());
 // Routes
 app.use('/api/recipes', recipeRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Recipe Manager!');
+    console.log('Root route working');
+});
+
 // Connect to DB and start server
 const PORT = process.env.PORT || 5000;
 connectDB();

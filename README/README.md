@@ -55,8 +55,17 @@ The server will run on http://localhost:5000.
 # API Endpoints
 Base URL: http://localhost:5000/api/recipes
 
+1. Root Route:
 
-1. Create a Recipe
+Endpoint: GET /
+
+Description: Checking the initial url with GET request
+
+Response:
+
+"Welcome to the Precipe Manager!"
+
+2. Create a Recipe
 
 Method: POST
 Endpoint: /
@@ -69,17 +78,17 @@ Example Request Body:
   "cookingTime": 10
 }
 
-2. Get All Recipes
+3. Get All Recipes
 
 Method: GET
 Endpoint: /
 
-3. Get a Recipe by ID
+4. Get a Recipe by ID
 
 Method: GET
 Endpoint: /:id
 
-4. Update a Recipe
+5. Update a Recipe
 
 Method: PUT
 Endpoint: /:id
@@ -100,7 +109,13 @@ Endpoint: /:id
 
 # Testing the API
 
-1. Create a Recipe (POST)
+1. Root Route:
+
+Method: GET URL: http://localhost:5000/
+
+"Welcome to the Precipe Manager!"
+
+2. Create a Recipe (POST)
 
 Method: POST
 URL: http://localhost:5000/api/recipes
@@ -130,7 +145,7 @@ Expected Response:
 }
 
 
-2. Get All Recipes (GET)
+3. Get All Recipes (GET)
 
 Method: GET
 URL: http://localhost:5000/api/recipes
@@ -148,7 +163,7 @@ Expected Response:
   }
 ]
 
-3. Get a Recipe by ID (GET)
+4. Get a Recipe by ID (GET)
 
 Method: GET
 URL: http://localhost:5000/api/recipes/:id
@@ -165,7 +180,7 @@ Expected Response:
   "__v": 0
 }
 
-4. Update a Recipe (PUT)
+5. Update a Recipe (PUT)
 
 Method: PUT
 URL: http://localhost:5000/api/recipes/:id
@@ -194,7 +209,7 @@ Expected Response:
   }
 }
 
-5. Delete a Recipe (DELETE)
+6. Delete a Recipe (DELETE)
 
 Method: DELETE
 URL: http://localhost:5000/api/recipes/:id
